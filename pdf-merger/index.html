@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclar Imagens em PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📄 Mesclar Imagens em PDF</h1>
+            <p>Selecione as imagens que deseja transformar em um único PDF</p>
+        </header>
+
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-content">
+                <div class="upload-icon">📁</div>
+                <p>Arraste e solte suas imagens aqui</p>
+                <p class="upload-subtext">ou clique para selecionar</p>
+                <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                <p class="upload-info">Formatos: PNG, JPG, JPEG, GIF, BMP (max. 10MB)</p>
+            </div>
+        </div>
+
+        <div id="fileList" class="file-list" style="display: none;">
+            <div class="file-header">
+                <h3>Arquivos selecionados (<span id="fileCount">0</span>)</h3>
+                <button id="clearAll" class="clear-btn">Limpar todos</button>
+            </div>
+            <div id="fileItems" class="file-items"></div>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+            <div class="empty-icon">📸</div>
+            <p>Nenhuma imagem selecionada</p>
+            <p class="empty-subtext">Clique na área acima para começar</p>
+        </div>
+
+        <button id="generateBtn" class="generate-btn" style="display: none;">📄 Gerar PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
